@@ -11,17 +11,10 @@ public class Create_Field : MonoBehaviour
 
     float textureSize;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         textureSize = tile.GetComponent<Renderer>().bounds.size.x;
         CreateField();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void CreateField() {
