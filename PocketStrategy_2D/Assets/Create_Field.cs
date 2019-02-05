@@ -6,8 +6,9 @@ public class Create_Field : MonoBehaviour
 {
 
     public GameObject tile;
-
+    [Range(0, 50)]
     public int col, row;
+    int numTiles;
 
     float textureSize;
 
@@ -15,6 +16,7 @@ public class Create_Field : MonoBehaviour
     {
         textureSize = tile.GetComponent<Renderer>().bounds.size.x;
         CreateField();
+        print(numTiles);
     }
 
     void CreateField() {
@@ -22,7 +24,8 @@ public class Create_Field : MonoBehaviour
             for (int j = 0; j < row; j++) {
                 Vector3 position = new Vector3((-(col*textureSize / 2f)) + (textureSize*i) + (textureSize/2), (-(row*textureSize / 2f)) + (textureSize*j) + (textureSize/2), 0);
                 
-                Instantiate(tile, transform.TransformPoint(position), Quaternion.identity, transform);
+                GameObject newTile = Instantiate(tile, transform.TransformPoint(position), Quaternion.identity, transform);
+                numTiles++;
             }
         }
     }
