@@ -16,7 +16,7 @@ public class Create_Field : MonoBehaviour
     {
         textureSize = tile.GetComponent<Renderer>().bounds.size.x;
         CreateField();
-        print(numTiles);
+        print("Number of Tile Created: " + numTiles);
     }
 
     void CreateField() {
