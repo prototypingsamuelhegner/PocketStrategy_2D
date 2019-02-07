@@ -11,11 +11,13 @@ public class Path_Creation : MonoBehaviour
 
     void Awake()
     {
-        if (path.Count != transform.childCount)
+        if (path.Count < transform.childCount)
         {
             for (int i = 0; i < transform.childCount; i++)
             {
                 path.Add(transform.GetChild(i).gameObject);
+                path[i].transform.position = new Vector3(path[i].transform.position.x, path[i].transform.position.y, transform.position.z);
+                transform.GetChild(i).gameObject.name = "Point: " + i;
             }
         }
     }
