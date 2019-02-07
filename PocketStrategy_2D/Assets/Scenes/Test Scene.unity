@@ -421,9 +421,9 @@ GameObject:
   m_Component:
   - component: {fileID: 993568058}
   - component: {fileID: 993568057}
-  - component: {fileID: 993568059}
   - component: {fileID: 993568061}
   - component: {fileID: 993568060}
+  - component: {fileID: 993568059}
   m_Layer: 0
   m_Name: Path
   m_TagString: Untagged
@@ -492,8 +492,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca7385a9b3c602e4388d550fe9d07507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeWave: 0
-  timeBetweenSpawn: 0
+  activeWave: 1
+  timeBetweenSpawn: 0.2
+  numberOfEnemies: 0
+  bombEveryNormals: 0
+  activeEnemies: []
 --- !u!120 &993568060
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -661,12 +664,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pools:
-  - tag: Normal Enemy
-    prefab: {fileID: 0}
-    size: 0
-  - tag: Bomber Enemy
-    prefab: {fileID: 0}
-    size: 0
+  - tag: Normal
+    prefab: {fileID: 3876533114647216901, guid: aa80df84618a1484884bc4cba2ca954c,
+      type: 3}
+    size: 100
+  - tag: Bomb
+    prefab: {fileID: 1156354793303760667, guid: 052cf7e34ac7dd145b24d846c0dd087c,
+      type: 3}
+    size: 100
 --- !u!1 &1286103682
 GameObject:
   m_ObjectHideFlags: 0
