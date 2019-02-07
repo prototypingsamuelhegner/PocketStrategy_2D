@@ -17,7 +17,6 @@ public class Tower_Movement : MonoBehaviour
     {
         click,
         arrows,
-        ui
     }
 
     public MovementSystem mode;
@@ -38,13 +37,16 @@ public class Tower_Movement : MonoBehaviour
             }
         }
 
-        transform.position = currentTile.transform.position;
+        Vector3 tempCurrentTile = new Vector3(currentTile.transform.position.x, currentTile.transform.position.y, -2f);
+
+        transform.position = tempCurrentTile;
         moving = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+
         if (mode == MovementSystem.click)
         {
             if (!moving) {
@@ -79,10 +81,7 @@ public class Tower_Movement : MonoBehaviour
             }
             
         }
-        else if (mode == MovementSystem.ui)
-        {
-
-        }
+        
         else if (mode == MovementSystem.arrows)
         {
             if (!moving)
@@ -123,12 +122,14 @@ public class Tower_Movement : MonoBehaviour
 
         }
 
+        Vector3 tempCurrentTile = new Vector3(currentTile.transform.position.x, currentTile.transform.position.y, -2f);
 
         if (moving)
         {
-            if (Vector3.Distance(transform.position, currentTile.transform.position) > 0)
+            
+            if (Vector3.Distance(transform.position, tempCurrentTile) > 0)
             {
-                transform.position = Vector3.MoveTowards(transform.position, currentTile.transform.position, Time.deltaTime * speed);
+                transform.position = Vector3.MoveTowards(transform.position, tempCurrentTile, Time.deltaTime * speed);
             }
             else
             {

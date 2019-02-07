@@ -13,12 +13,10 @@ public class Object_Pool : MonoBehaviour
 
     void Awake()
     {
+
         //Assigns instance
         Instance = this;
-    }
 
-    void Start()
-    {
         //initiallises the object pools as a string and queue
         //the string is the object type
         //the queue is the data structure to hold the objects. Queues are fast to grab the first item out of them which makes them ideal for spawning things out of them
