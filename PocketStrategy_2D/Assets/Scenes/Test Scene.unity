@@ -498,12 +498,12 @@ MonoBehaviour:
   EnemiesLeft: 0
   activeEnemies: []
   waves:
-  - NumberOfNormal: 10
-    bombEveryNormal: 2
+  - NumberOfNormal: 3
+    bombEveryNormal: 0
     spawnRate: 1
-  - NumberOfNormal: 10
-    bombEveryNormal: 8
-    spawnRate: 2
+  - NumberOfNormal: 5
+    bombEveryNormal: 2
+    spawnRate: 5
 --- !u!120 &993568060
 LineRenderer:
   m_ObjectHideFlags: 0

@@ -81,7 +81,9 @@ public class Wave_Manager : MonoBehaviour
 
             if (EnemiesLeft == 0) {
                 activeWave = false;
-                if (currentWave < waves.Length - 2) {
+                if (currentWave < waves.Length - 1) {
+                    print("reset");
+
                     currentWave++;
                 }
                 
