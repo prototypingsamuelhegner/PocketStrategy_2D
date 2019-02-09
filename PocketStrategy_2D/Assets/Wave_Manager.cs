@@ -107,7 +107,7 @@ public class Wave
 
     [Range(0, 20)]
     public int bombEveryNormal;
-    public int spawnRate;
+    public float spawnRate;
 }
 
 
