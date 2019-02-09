@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1156354793303760666}
   - component: {fileID: 1156354793303760664}
   - component: {fileID: 1156354793303760665}
+  - component: {fileID: 733348478854586021}
   m_Layer: 0
   m_Name: BombDude
   m_TagString: Untagged
@@ -93,3 +94,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &733348478854586021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156354793303760667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 586f60d9e6129ba4599aca2fa8513c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
