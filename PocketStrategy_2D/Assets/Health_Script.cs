@@ -17,6 +17,7 @@ public class Health_Script : MonoBehaviour
 
     void Start()
     {
+        health = startHealth;
         deathCalled = false;
     }
 

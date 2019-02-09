@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 1156354793303760664}
   - component: {fileID: 1156354793303760665}
   - component: {fileID: 733348478854586021}
+  - component: {fileID: 8325706062249899941}
+  - component: {fileID: 5452597368959393732}
   m_Layer: 0
   m_Name: BombDude
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,3 +108,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 586f60d9e6129ba4599aca2fa8513c02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startHealth: 2
+  destroyOnDeath: 1
+  animationOnDeath: 0
+  explodeOnDeath: 1
+--- !u!114 &8325706062249899941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156354793303760667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ceb0ca11998f5499f04648593e8b60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!60 &5452597368959393732
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156354793303760667}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.3083333, y: 1.1333333}
+    newSize: {x: 7.85, y: 6.8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.64964855, y: -0.5677266}
+      - {x: 0.6529423, y: -0.56588435}
+      - {x: -0.005851865, y: 0.5537101}
