@@ -86,7 +86,7 @@ public class Tower_Movement : MonoBehaviour
         {
             if (!moving)
             {
-                if (Input.GetKeyDown(KeyCode.DownArrow))
+                if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
                 {
                     if (currentTile.GetComponent<Set_Neighbours>().down != null)
                     {
@@ -94,7 +94,7 @@ public class Tower_Movement : MonoBehaviour
                         moving = true;
                     }
                 }
-                else if (Input.GetKeyDown(KeyCode.UpArrow))
+                else if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
                 {
                     if (currentTile.GetComponent<Set_Neighbours>().up != null)
                     {
@@ -102,7 +102,7 @@ public class Tower_Movement : MonoBehaviour
                         moving = true;
                     }
                 }
-                else if (Input.GetKeyDown(KeyCode.RightArrow))
+                else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
                 {
                     if (currentTile.GetComponent<Set_Neighbours>().right != null)
                     {
@@ -110,7 +110,7 @@ public class Tower_Movement : MonoBehaviour
                         moving = true;
                     }
                 }
-                else if (Input.GetKeyDown(KeyCode.LeftArrow))
+                else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
                 {
                     if (currentTile.GetComponent<Set_Neighbours>().left != null)
                     {
