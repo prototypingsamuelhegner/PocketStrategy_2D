@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8786927712313963167}
   - component: {fileID: 6954918157602087505}
-  - component: {fileID: 9145734559960855778}
   - component: {fileID: 4828556427880064767}
+  - component: {fileID: 6759627003824219837}
   m_Layer: 8
-  m_Name: Tile
-  m_TagString: Tile
+  m_Name: Mortar
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: f4a1ad015537c104cae2094fdb57db9a, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -81,22 +81,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &9145734559960855778
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3194857507598516033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 052c9e3de958f8749a22c9e7332975d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  right: {fileID: 0}
-  left: {fileID: 0}
-  up: {fileID: 0}
-  down: {fileID: 0}
 --- !u!58 &4828556427880064767
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -113,3 +97,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.95
+--- !u!114 &6759627003824219837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3194857507598516033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f25b095fbe6144db50a3cdab0e8000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tile: {fileID: 3194857507598516033, guid: ec791c4fa3c477d4e9f1785815869c13, type: 3}
+  mortar: {fileID: 3194857507598516033}
+  col: 3
+  row: 3
+  timer: 2
