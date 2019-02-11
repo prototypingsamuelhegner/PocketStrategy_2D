@@ -6,6 +6,8 @@ public class Bullet_Script : MonoBehaviour
 {
     GameObject target;
 
+    Vector3 previousPos;
+
     public float speed;
 
     void Start()
@@ -17,7 +19,7 @@ public class Bullet_Script : MonoBehaviour
     {
         
 
-        if ( target == null || Vector2.Distance(transform.position, target.transform.position) < 0.1f ) {
+        if (Vector2.Distance(transform.position, previousPos) < 0.1f || Vector2.Distance(transform.position, target.transform.position) < 0.1f) {
             if (target != null) {
                 target.GetComponent<Health_Script>().RemoveHealth(1);
             }
@@ -27,6 +29,7 @@ public class Bullet_Script : MonoBehaviour
 
         if (target != null) {
             transform.position = Vector3.MoveTowards(transform.position, target.transform.position, Time.deltaTime * speed);
+            previousPos = target.transform.position;
         }
     }
 
