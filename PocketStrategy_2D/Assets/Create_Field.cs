@@ -47,7 +47,7 @@ public class Create_Field : MonoBehaviour
         tiles = GameObject.FindGameObjectsWithTag("Tile");
         index = Random.Range(0, tiles.Length);
         mortarPos = tiles[index];
-        print(mortar.name);
+        //print(mortar.name);
         GameObject newMortar = Instantiate(mortar, mortarPos.transform.position , Quaternion.identity, transform);
     }
 

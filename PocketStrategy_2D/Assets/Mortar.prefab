@@ -113,4 +113,4 @@ MonoBehaviour:
   mortar: {fileID: 3194857507598516033}
   col: 3
   row: 3
-  timer: 2
+  timer: 1
