@@ -19,7 +19,7 @@ public class Bullet_Script : MonoBehaviour
     {
         
 
-        if (Vector2.Distance(transform.position, previousPos) < 0.1f || Vector2.Distance(transform.position, target.transform.position) < 0.1f) {
+        if (Vector2.Distance(transform.position, previousPos) < 0.1f) {
             if (target != null) {
                 target.GetComponent<Health_Script>().RemoveHealth(1);
             }
