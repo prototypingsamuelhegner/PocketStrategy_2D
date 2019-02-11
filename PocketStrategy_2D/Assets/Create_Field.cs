@@ -7,7 +7,6 @@ public class Create_Field : MonoBehaviour
     GameObject[] tiles;
     public GameObject tile;
     int index;
-    int numMortars = 20;
 
     public GameObject mortar;
     GameObject mortarPos;
@@ -46,15 +45,10 @@ public class Create_Field : MonoBehaviour
     void MortarStrike()
     {
         tiles = GameObject.FindGameObjectsWithTag("Tile");
-
-        for (int i = 0; i < numMortars; i++)
-        {
-            index = Random.Range(0, tiles.Length);
-            mortarPos = tiles[index];
-            //print(mortar.name);
-            GameObject newMortar = Instantiate(mortar, mortarPos.transform.position, Quaternion.identity, transform);
-            //numMortars++;
-        }
+        index = Random.Range(0, tiles.Length);
+        mortarPos = tiles[index];
+        print(mortar.name);
+        GameObject newMortar = Instantiate(mortar, mortarPos.transform.position , Quaternion.identity, transform);
     }
 
     IEnumerator MortarTimer()
