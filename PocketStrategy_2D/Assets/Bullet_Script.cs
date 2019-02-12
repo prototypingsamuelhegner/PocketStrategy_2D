@@ -17,19 +17,32 @@ public class Bullet_Script : MonoBehaviour
 
     void Update()
     {
-        
 
-        if (Vector2.Distance(transform.position, previousPos) < 0.1f) {
-            if (target != null) {
+
+
+
+        if (target != null)
+        {
+
+            if (Vector2.Distance(transform.position, previousPos) < 0.1f)
+            {
                 target.GetComponent<Health_Script>().RemoveHealth(1);
+                gameObject.SetActive(false);
             }
-            
-            gameObject.SetActive(false);
+            else
+            {
+                previousPos = target.transform.position;
+                transform.position = Vector3.MoveTowards(transform.position, previousPos, Time.deltaTime * speed);
+            }
         }
-
-        if (target != null) {
-            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, Time.deltaTime * speed);
-            previousPos = target.transform.position;
+        else {
+            if (Vector2.Distance(transform.position, previousPos) < 0.1f)
+            {
+                gameObject.SetActive(false);
+            }
+            else {
+                transform.position = Vector3.MoveTowards(transform.position, previousPos, Time.deltaTime * speed);
+            }
         }
     }
 
