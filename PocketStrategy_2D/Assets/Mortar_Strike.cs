@@ -6,17 +6,23 @@ public class Mortar_Strike : MonoBehaviour
 {
 
     public GameObject tile;
-    GameObject[] mortars;
 
     public GameObject mortar;
 
     float textureSize;
+
+    int damage;
+
     public float timer;
+
+    private void Start()
+    {
+        
+    }
 
     void Awake()
     {
         textureSize = tile.GetComponent<Renderer>().bounds.size.x;
-        //MortarRadius();
         StartCoroutine(ExplosionTime());
     }
 
@@ -25,9 +31,14 @@ public class Mortar_Strike : MonoBehaviour
         while (enabled)
         {
             yield return new WaitForSeconds(timer);
-            //mortars = GameObject.FindGameObjectsWithTag("Mortars");
-            //mortars[].tag = "Tile";
+
             Destroy(this.gameObject);
+            
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D coll)
+    {
+        coll.gameObject.GetComponent<Health_Script>().RemoveHealth(damage);
     }
 }

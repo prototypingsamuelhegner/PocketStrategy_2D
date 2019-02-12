@@ -74,9 +74,9 @@ public class Create_Field : MonoBehaviour
 
             yield return new WaitForSeconds(timer);
 
-            foreach( GameObject mortar in mortars)
+            foreach( GameObject m in mortars)
             {
-                mortar.tag = "Tile";
+                m.tag = "Tile";
             }
         }
     }

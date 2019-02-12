@@ -801,7 +801,7 @@ MonoBehaviour:
   tile: {fileID: 3194857507598516033, guid: ec791c4fa3c477d4e9f1785815869c13, type: 3}
   numMortars: 20
   mortar: {fileID: 3194857507598516033, guid: 8a33179b3616e51469f6ec2af93acd87, type: 3}
-  timer: 2
+  timer: 4
   col: 12
   row: 7
 --- !u!4 &1603880946
