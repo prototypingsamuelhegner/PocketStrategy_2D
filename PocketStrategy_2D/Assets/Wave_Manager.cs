@@ -14,8 +14,7 @@ public class Wave_Manager : MonoBehaviour
 
     int currentWave = 0;
 
-    public int EnemiesLeft;
-
+    public static int EnemiesLeft;
 
     public List<GameObject> activeEnemies;
 

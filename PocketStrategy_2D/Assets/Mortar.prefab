@@ -69,7 +69,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -10
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: f4a1ad015537c104cae2094fdb57db9a, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -111,6 +111,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile: {fileID: 3194857507598516033, guid: ec791c4fa3c477d4e9f1785815869c13, type: 3}
   mortar: {fileID: 3194857507598516033}
-  col: 3
-  row: 3
   timer: 2

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health_Script : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class Health_Script : MonoBehaviour
 
     Animator anim;
 
+    public Text healthCount;
 
     void Start()
     {
@@ -23,20 +25,27 @@ public class Health_Script : MonoBehaviour
 
     void Update()
     {
-        if (health <= 0 && !deathCalled) {
+        if (health <= 0 && !deathCalled)
+        {
             StartCoroutine(Death());
             deathCalled = true;
         }
+
+        SetHealthText();
     }
 
-    IEnumerator Death() {
-        if (explodeOnDeath) {
+    IEnumerator Death()
+    {
+        if (explodeOnDeath)
+        {
             gameObject.SendMessage("Explode");
         }
-        if (animationOnDeath) {
+        if (animationOnDeath)
+        {
             anim.SetTrigger("Death");
         }
-        if (destroyOnDeath) {
+        if (destroyOnDeath)
+        {
             if (animationOnDeath)
             {
                 yield return new WaitForEndOfFrame();
@@ -44,19 +53,26 @@ public class Health_Script : MonoBehaviour
                 yield return new WaitForSeconds(clipLength);
                 Destroy(gameObject);
             }
-            else {
+            else
+            {
                 Destroy(gameObject);
             }
         }
         yield return null;
     }
 
-    public void RemoveHealth(int healthToLose) {
+    public void RemoveHealth(int healthToLose)
+    {
         health -= healthToLose;
     }
 
-    public void AddHealth(int healthToAdd) {
+    public void AddHealth(int healthToAdd)
+    {
         health += healthToAdd;
     }
 
+    void SetHealthText()
+    {
+        healthCount.text = "Health: " + health.ToString();
+    }
 }

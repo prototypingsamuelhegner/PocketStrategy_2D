@@ -11,7 +11,7 @@ public class Mortar_Strike : MonoBehaviour
 
     float textureSize;
 
-    int damage;
+    int damage = 1;
 
     public float timer;
 
@@ -39,6 +39,10 @@ public class Mortar_Strike : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D coll)
     {
-        coll.gameObject.GetComponent<Health_Script>().RemoveHealth(damage);
+        if (coll.gameObject.tag == "Player")
+        {
+            //coll.gameObject.GetComponent<Health_Script>().RemoveHealth(damage);
+            Debug.Log("Enemy hit");
+        }
     }
 }
