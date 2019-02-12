@@ -38,7 +38,7 @@ public class Create_Field : MonoBehaviour
                 Vector3 position = new Vector3((-(col*textureSize / 2f)) + (textureSize*i) + (textureSize/2), (-(row*textureSize / 2f)) + (textureSize*j) + (textureSize/2), 0);
                 
                 GameObject newTile = Instantiate(tile, transform.TransformPoint(position), Quaternion.identity, transform);
-                newTile.transform.parent = tile.transform;
+                newTile.transform.parent = transform;
                 numTiles++;
             }
         }
