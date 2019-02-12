@@ -5,6 +5,7 @@ using UnityEngine;
 public class Create_Field : MonoBehaviour
 {
     GameObject[] tiles;
+    GameObject[] mortars;
     public GameObject tile;
     public int numMortars;
     int index;
@@ -45,23 +46,38 @@ public class Create_Field : MonoBehaviour
 
     void MortarStrike()
     {
+
         for (int i = 0; i < numMortars; i++)
         {
             tiles = GameObject.FindGameObjectsWithTag("Tile");
             index = Random.Range(0, tiles.Length);
             mortarPos = tiles[index];
+
+            while(mortarPos.tag == "Mortar")
+            {
+                index = Random.Range(0, tiles.Length);
+                mortarPos = tiles[index];
+            }
             //print(mortar.name);
+            mortarPos.tag = "Mortar";
             GameObject newMortar = Instantiate(mortar, mortarPos.transform.position, Quaternion.identity, transform);
         }
+
     }
 
     IEnumerator MortarTimer()
     {
         while (enabled)
         {
+            mortars = GameObject.FindGameObjectsWithTag("Mortar");
             MortarStrike();
+
             yield return new WaitForSeconds(timer);
-            
+
+            foreach( GameObject mortar in mortars)
+            {
+                mortar.tag = "Tile";
+            }
         }
     }
 }
