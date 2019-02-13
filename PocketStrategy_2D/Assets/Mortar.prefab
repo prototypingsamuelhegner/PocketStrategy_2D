@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6954918157602087505}
   - component: {fileID: 4828556427880064767}
   - component: {fileID: 6759627003824219837}
+  - component: {fileID: 8287843689760190631}
   m_Layer: 8
   m_Name: Mortar
   m_TagString: Untagged
@@ -71,7 +72,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: f4a1ad015537c104cae2094fdb57db9a, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.43529412}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -111,4 +112,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile: {fileID: 3194857507598516033, guid: ec791c4fa3c477d4e9f1785815869c13, type: 3}
   mortar: {fileID: 3194857507598516033}
+  mortarTile: {fileID: 0}
   timer: 2
+--- !u!114 &8287843689760190631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3194857507598516033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ceb0ca11998f5499f04648593e8b60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

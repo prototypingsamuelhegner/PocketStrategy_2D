@@ -9,6 +9,8 @@ public class Mortar_Strike : MonoBehaviour
 
     public GameObject mortar;
 
+    Color color;
+
     float textureSize;
 
     int damage = 1;
@@ -22,6 +24,7 @@ public class Mortar_Strike : MonoBehaviour
 
     void Awake()
     {
+        //color = gameObject.GetComponent<Renderer>().material.color;
         textureSize = tile.GetComponent<Renderer>().bounds.size.x;
         StartCoroutine(ExplosionTime());
     }
@@ -31,18 +34,10 @@ public class Mortar_Strike : MonoBehaviour
         while (enabled)
         {
             yield return new WaitForSeconds(timer);
-
+           
+            gameObject.GetComponent<Explosion_Script>().Explode();
             Destroy(this.gameObject);
             
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D coll)
-    {
-        if (coll.gameObject.tag == "Player")
-        {
-            //coll.gameObject.GetComponent<Health_Script>().RemoveHealth(damage);
-            Debug.Log("Enemy hit");
         }
     }
 }

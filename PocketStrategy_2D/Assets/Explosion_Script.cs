@@ -7,8 +7,8 @@ public class Explosion_Script : MonoBehaviour
 
     GameObject player;
 
-    float explosionRadius;
-    int explosionDamage;
+    float explosionRadius = 2;
+    int explosionDamage = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +16,7 @@ public class Explosion_Script : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    void Explode() {
+    public void Explode() {
 
         Vector2 playerPos = new Vector2(player.transform.position.x, player.transform.position.y);
         Vector2 thisPos = new Vector2(transform.position.x, transform.position.y);
@@ -25,6 +25,7 @@ public class Explosion_Script : MonoBehaviour
 
         if (distanceToPlayer < explosionRadius) {
             player.GetComponent<Health_Script>().RemoveHealth(explosionDamage);
+            Debug.Log("Hit");
         }
     }
 }
