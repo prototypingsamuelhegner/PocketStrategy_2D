@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Explosion_Script : MonoBehaviour
 {
-
     GameObject player;
+
+    //public Camera shake;
 
     float explosionRadius = 1;
     int explosionDamage = 1;
@@ -14,6 +15,8 @@ public class Explosion_Script : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        gameObject.GetComponent<Screen_Shake>();
+       
     }
 
     public void Explode() {
@@ -24,6 +27,7 @@ public class Explosion_Script : MonoBehaviour
         float distanceToPlayer = Vector2.Distance(playerPos, thisPos);
 
         if (distanceToPlayer < explosionRadius) {
+            //shake.gameObject.GetComponent<Screen_Shake>().TriggerShake();
             player.GetComponent<Health_Script>().RemoveHealth(explosionDamage);
             Debug.Log("Hit");
         }
