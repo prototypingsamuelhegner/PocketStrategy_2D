@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Health_Script : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class Health_Script : MonoBehaviour
         }
 
         SetHealthText();
+        Restart();
     }
 
     IEnumerator Death()
@@ -59,6 +61,14 @@ public class Health_Script : MonoBehaviour
             }
         }
         yield return null;
+    }
+
+    void Restart()
+    {
+        if(health <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 
     public void RemoveHealth(int healthToLose)
