@@ -7,7 +7,7 @@ public class Explosion_Script : MonoBehaviour
 
     GameObject player;
 
-    float explosionRadius = 2;
+    float explosionRadius = 1;
     int explosionDamage = 1;
 
     // Start is called before the first frame update
