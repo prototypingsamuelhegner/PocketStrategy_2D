@@ -112,7 +112,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile: {fileID: 3194857507598516033, guid: ec791c4fa3c477d4e9f1785815869c13, type: 3}
   mortar: {fileID: 3194857507598516033}
-  mortarTile: {fileID: 0}
   timer: 2
 --- !u!114 &8287843689760190631
 MonoBehaviour:

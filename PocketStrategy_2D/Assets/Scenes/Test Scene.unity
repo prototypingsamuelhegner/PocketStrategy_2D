@@ -802,12 +802,9 @@ MonoBehaviour:
   breakTimer: 0
   activeEnemies: []
   waves:
-  - NumberOfNormal: 100
-    bombEveryNormal: 0
-    spawnRate: 0.5
-  - NumberOfNormal: 5
-    bombEveryNormal: 2
-    spawnRate: 5
+  - NumberOfNormal: 150
+    bombEveryNormal: 4
+    spawnRate: 1
 --- !u!120 &993568060
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -947,9 +944,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile: {fileID: 3194857507598516033, guid: ec791c4fa3c477d4e9f1785815869c13, type: 3}
-  numMortars: 20
+  numMortars: 2
   mortar: {fileID: 3194857507598516033, guid: 8a33179b3616e51469f6ec2af93acd87, type: 3}
-  timer: 4
+  timer: 0.2
   col: 10
   row: 7
 --- !u!4 &1075861275

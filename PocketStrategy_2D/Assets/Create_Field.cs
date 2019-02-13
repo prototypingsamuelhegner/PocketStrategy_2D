@@ -13,7 +13,7 @@ public class Create_Field : MonoBehaviour
     public GameObject mortar;
     GameObject mortarPos;
 
-    public float timer;
+    public float timer = 0.5f;
 
     [Range(0, 50)]
     public int col, row;
