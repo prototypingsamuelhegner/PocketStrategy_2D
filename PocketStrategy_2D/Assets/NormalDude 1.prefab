@@ -486,7 +486,7 @@ MonoBehaviour:
   screen: {fileID: 0}
   startHealth: 2
   destroyOnDeath: 1
-  animationOnDeath: 0
+  animationOnDeath: 1
   explodeOnDeath: 0
   healthCount: {fileID: 0}
 --- !u!58 &1039160168

@@ -12,7 +12,7 @@ public class Health_Script : MonoBehaviour
 
     bool deathCalled;
 
-    int health;
+    public int health;
 
     public bool destroyOnDeath, animationOnDeath, explodeOnDeath;
 
@@ -24,6 +24,7 @@ public class Health_Script : MonoBehaviour
     {
         health = startHealth;
         deathCalled = false;
+        anim = transform.GetChild(0).GetComponent<Animator>();
     }
 
     void Update()

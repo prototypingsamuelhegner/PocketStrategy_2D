@@ -10,17 +10,22 @@ public class Enemy_Movement : MonoBehaviour
     public float speed;
 
     GameObject[] myPath;
+    Health_Script health;
 
 
     void Awake()
     {
         myPath = GameObject.FindObjectOfType<Path_Creation>().path.ToArray();
         transform.position = myPath[0].transform.position;
+        health = GetComponent<Health_Script>();
     }
 
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, myPath[current].transform.position, speed * Time.deltaTime);
+        if (health.health > 0) {
+            transform.position = Vector3.MoveTowards(transform.position, myPath[current].transform.position, speed * Time.deltaTime);
+        }
+        
 
         if (Vector3.Distance(transform.position, myPath[current].transform.position) < 0.1f) {
 
