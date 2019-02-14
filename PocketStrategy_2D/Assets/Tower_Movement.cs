@@ -6,7 +6,8 @@ public class Tower_Movement : MonoBehaviour
 {
     Ray ray;
 
-    public Animator anim;
+
+    Animator anim;
 
     public GameObject currentTile;
 
@@ -27,7 +28,7 @@ public class Tower_Movement : MonoBehaviour
     void Start()
     {
         Set_Neighbours[] tiles = FindObjectsOfType<Set_Neighbours>();
-        anim = GetComponent<Animator>();
+        anim = transform.GetChild(0).GetComponent<Animator>();
         GameObject temp_Closest = new GameObject();
         temp_Closest.transform.position = new Vector3(float.MaxValue, float.MaxValue, float.MaxValue);
         currentTile = temp_Closest;

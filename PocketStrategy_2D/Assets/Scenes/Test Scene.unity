@@ -699,8 +699,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pools:
   - tag: Normal
-    prefab: {fileID: 1820861724745402827, guid: 0461862395416b7439c09c8ce2d97a68,
-      type: 3}
+    prefab: {fileID: 1039160166}
     size: 100
   - tag: Bomb
     prefab: {fileID: 1156354793303760667, guid: 052cf7e34ac7dd145b24d846c0dd087c,
@@ -845,6 +844,75 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1001 &706669490
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3876533114647216901, guid: aa80df84618a1484884bc4cba2ca954c,
+        type: 3}
+      propertyPath: m_Name
+      value: NormalDude
+      objectReference: {fileID: 0}
+    - target: {fileID: 3876533114647216923, guid: aa80df84618a1484884bc4cba2ca954c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.4140421
+      objectReference: {fileID: 0}
+    - target: {fileID: 3876533114647216923, guid: aa80df84618a1484884bc4cba2ca954c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5420792
+      objectReference: {fileID: 0}
+    - target: {fileID: 3876533114647216923, guid: aa80df84618a1484884bc4cba2ca954c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.5342855
+      objectReference: {fileID: 0}
+    - target: {fileID: 3876533114647216923, guid: aa80df84618a1484884bc4cba2ca954c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3876533114647216923, guid: aa80df84618a1484884bc4cba2ca954c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3876533114647216923, guid: aa80df84618a1484884bc4cba2ca954c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3876533114647216923, guid: aa80df84618a1484884bc4cba2ca954c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3876533114647216923, guid: aa80df84618a1484884bc4cba2ca954c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3876533114647216923, guid: aa80df84618a1484884bc4cba2ca954c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3876533114647216923, guid: aa80df84618a1484884bc4cba2ca954c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3876533114647216923, guid: aa80df84618a1484884bc4cba2ca954c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aa80df84618a1484884bc4cba2ca954c, type: 3}
 --- !u!1 &737710021
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,8 +951,8 @@ MonoBehaviour:
   activeEnemies: []
   waves:
   - NumberOfNormal: 150
-    bombEveryNormal: 4
-    spawnRate: 1
+    bombEveryNormal: 0
+    spawnRate: 2
 --- !u!120 &737710023
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -1065,6 +1133,12 @@ Transform:
   m_Father: {fileID: 737710026}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1039160166 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3876533114647216901, guid: aa80df84618a1484884bc4cba2ca954c,
+    type: 3}
+  m_PrefabInstance: {fileID: 706669490}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1068511920
 GameObject:
   m_ObjectHideFlags: 0
@@ -1290,9 +1364,9 @@ GameObject:
   - component: {fileID: 1422211475}
   - component: {fileID: 1422211474}
   - component: {fileID: 1422211473}
-  - component: {fileID: 1422211472}
   - component: {fileID: 1422211471}
   - component: {fileID: 1422211470}
+  - component: {fileID: 1422211472}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Player
@@ -1346,12 +1420,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1422211469}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dfd8006737803748b2839f73a235340, type: 3}
+  m_Script: {fileID: 11500000, guid: 4fbfb6345e4eb41408800712e53099f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 5309092541758269292, guid: 0889074052877cd4d95d974e9beb7b9d, type: 3}
-  possibleEnemies: []
-  shotsPerSecond: 5
+  crosshair1: {fileID: 1347218493}
+  crosshair2: {fileID: 1560725285}
+  shotsPerSeconds: 2
 --- !u!114 &1422211473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1382,7 +1456,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7642c33315a364241a1815e08edb890f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
   currentTile: {fileID: 0}
   moving: 0
   speed: 9
