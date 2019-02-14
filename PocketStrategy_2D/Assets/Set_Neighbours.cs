@@ -8,10 +8,15 @@ public class Set_Neighbours : MonoBehaviour
 
     CircleCollider2D col;
 
+    BoxCollider2D box;
+
     void Start()
     {
         col = GetComponent<CircleCollider2D>();
         Set();
+        Destroy(col);
+        box = gameObject.AddComponent<BoxCollider2D>();
+        box.isTrigger = true;
     }
 
     void Set() {

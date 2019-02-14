@@ -92,6 +92,7 @@ public class Tower_Movement : MonoBehaviour
                     {
                         currentTile = currentTile.GetComponent<Set_Neighbours>().down;
                         moving = true;
+                        gameObject.SendMessage("Rotate");
                     }
                 }
                 else if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
@@ -100,6 +101,7 @@ public class Tower_Movement : MonoBehaviour
                     {
                         currentTile = currentTile.GetComponent<Set_Neighbours>().up;
                         moving = true;
+                        gameObject.SendMessage("Rotate");
                     }
                 }
                 else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
@@ -108,6 +110,7 @@ public class Tower_Movement : MonoBehaviour
                     {
                         currentTile = currentTile.GetComponent<Set_Neighbours>().right;
                         moving = true;
+                        gameObject.SendMessage("Rotate");
                     }
                 }
                 else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
@@ -116,6 +119,7 @@ public class Tower_Movement : MonoBehaviour
                     {
                         currentTile = currentTile.GetComponent<Set_Neighbours>().left;
                         moving = true;
+                        gameObject.SendMessage("Rotate");
                     }
                 }
             }

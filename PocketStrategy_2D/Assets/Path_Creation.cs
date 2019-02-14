@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[ExecuteAlways]
 public class Path_Creation : MonoBehaviour
 {
     public List<GameObject> path = new List<GameObject>();
