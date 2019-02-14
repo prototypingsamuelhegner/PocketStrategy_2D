@@ -48,12 +48,6 @@ public class Tower_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
-        anim.SetFloat("Move Up", v);
-        anim.SetFloat("Alien Move Left", h);
-
-
         if (mode == MovementSystem.click)
         {
             if (!moving) {
