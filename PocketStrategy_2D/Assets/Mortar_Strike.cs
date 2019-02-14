@@ -9,7 +9,9 @@ public class Mortar_Strike : MonoBehaviour
 
     public GameObject mortar;
 
-    Renderer material;
+    public Sprite[] sprites;
+
+    SpriteRenderer sprite;
 
     float textureSize;
 
@@ -17,17 +19,16 @@ public class Mortar_Strike : MonoBehaviour
 
     public float timer;
 
-    float boomTimer = 1f;
+    float boomTimer = 2f;
 
     private void Start()
     {
-       
+        sprite = gameObject.GetComponent<SpriteRenderer>();
     }
 
     void Awake()
     {
-        //color = gameObject.GetComponent<Renderer>().material.color;
-        material = gameObject.GetComponent<Renderer>();
+        //sprite = gameObject.GetComponent<SpriteRenderer>().sprite;
 
         textureSize = tile.GetComponent<Renderer>().bounds.size.x;
         StartCoroutine(ExplosionTime());
@@ -37,13 +38,14 @@ public class Mortar_Strike : MonoBehaviour
     {
         while (enabled)
         {
+            //sprite = sprites[1];
             yield return new WaitForSeconds(boomTimer);
-
-            //Debug.Log("Ready");
+            sprite.sprite = sprites[1];
 
             yield return new WaitForSeconds(timer);
             gameObject.GetComponent<Explosion_Script>().Explode();
-            //Camera.main.GetComponent<CameraControl>().Shake(1.5f, 5, 1.5f);
+            sprite.sprite = sprites[2];
+            yield return new WaitForSeconds(boomTimer);
             Destroy(this.gameObject);
             
         }
