@@ -6,6 +6,8 @@ public class Tower_Movement : MonoBehaviour
 {
     Ray ray;
 
+    public Animator anim;
+
     public GameObject currentTile;
 
     public bool moving;
@@ -25,7 +27,7 @@ public class Tower_Movement : MonoBehaviour
     void Start()
     {
         Set_Neighbours[] tiles = FindObjectsOfType<Set_Neighbours>();
-
+        anim = GetComponent<Animator>();
         GameObject temp_Closest = new GameObject();
         temp_Closest.transform.position = new Vector3(float.MaxValue, float.MaxValue, float.MaxValue);
         currentTile = temp_Closest;
@@ -46,6 +48,11 @@ public class Tower_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float h = Input.GetAxis("Horizontal");
+        float v = Input.GetAxis("Vertical");
+        anim.SetFloat("Move Up", v);
+        anim.SetFloat("Alien Move Left", h);
+
 
         if (mode == MovementSystem.click)
         {

@@ -70,8 +70,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: f4a1ad015537c104cae2094fdb57db9a, type: 3}
-  m_Color: {r: 1, g: 0.18942153, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 922fa0023d9c11a46a5cb3e624d1c9ea, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -96,10 +96,10 @@ MonoBehaviour:
   tile: {fileID: 3194857507598516033, guid: ec791c4fa3c477d4e9f1785815869c13, type: 3}
   mortar: {fileID: 3194857507598516033}
   sprites:
-  - {fileID: 21300000, guid: 65d4b8c13fa54b847bd96f9ad7d55f96, type: 3}
-  - {fileID: 21300000, guid: dfdc4b4bcec31a84f8806714829e4055, type: 3}
-  - {fileID: 21300000, guid: 17f5cadda7557e947bb748b41a082472, type: 3}
-  timer: 2
+  - {fileID: 21300000, guid: 01a384427450c8546b69a8ef302dfe4f, type: 3}
+  - {fileID: 21300000, guid: dd3042dabe6d48140b779677ccb04753, type: 3}
+  - {fileID: 21300000, guid: 59e69ae3334c38f49a57114d42cca705, type: 3}
+  timer: 1
 --- !u!114 &8287843689760190631
 MonoBehaviour:
   m_ObjectHideFlags: 0
