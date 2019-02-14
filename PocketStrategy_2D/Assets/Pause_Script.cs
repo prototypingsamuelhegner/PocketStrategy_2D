@@ -20,15 +20,6 @@ public class Pause_Script : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape) && paused == false)
         {
-            /*if(!pausePanel.activeInHierarchy)
-            {
-                PauseGame();
-            }
-
-            if(pausePanel.activeInHierarchy)
-            {
-                UnpauseGame();
-            }*/
 
             PauseGame();
             paused = true;
@@ -39,7 +30,6 @@ public class Pause_Script : MonoBehaviour
             UnpauseGame();
             paused = false;
         }
-
 
     }
 

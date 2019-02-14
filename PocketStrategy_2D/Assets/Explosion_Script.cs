@@ -15,7 +15,6 @@ public class Explosion_Script : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        gameObject.GetComponent<Screen_Shake>();
        
     }
 
@@ -29,6 +28,7 @@ public class Explosion_Script : MonoBehaviour
         if (distanceToPlayer < explosionRadius) 
         {
             player.GetComponent<Health_Script>().RemoveHealth(explosionDamage);
+            Camera.main.GetComponent<CameraControl>().Shake(.2f, 40, 10f);
             Debug.Log("Hit");
         }
     }

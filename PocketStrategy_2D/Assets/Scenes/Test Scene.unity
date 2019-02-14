@@ -954,6 +954,7 @@ GameObject:
   - component: {fileID: 1075861274}
   - component: {fileID: 1075861276}
   - component: {fileID: 1075861277}
+  - component: {fileID: 1075861278}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -976,7 +977,7 @@ MonoBehaviour:
   tile: {fileID: 3194857507598516033, guid: ec791c4fa3c477d4e9f1785815869c13, type: 3}
   numMortars: 2
   mortar: {fileID: 3194857507598516033, guid: 8a33179b3616e51469f6ec2af93acd87, type: 3}
-  timer: 0.2
+  timer: 0.1
   col: 10
   row: 7
 --- !u!4 &1075861275
@@ -1032,6 +1033,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreCount: {fileID: 1585873215}
+--- !u!114 &1075861278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075861273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af4a6e956dcea4fea92660f989a29bdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pausePanel: {fileID: 1962126479}
 --- !u!1 &1161625376
 GameObject:
   m_ObjectHideFlags: 0

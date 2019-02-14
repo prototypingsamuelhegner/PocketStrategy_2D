@@ -43,7 +43,7 @@ public class Mortar_Strike : MonoBehaviour
 
             yield return new WaitForSeconds(timer);
             gameObject.GetComponent<Explosion_Script>().Explode();
-            Camera.main.GetComponent<CameraControl>().Shake(2, 2, 2);
+            //Camera.main.GetComponent<CameraControl>().Shake(1.5f, 5, 1.5f);
             Destroy(this.gameObject);
             
         }
