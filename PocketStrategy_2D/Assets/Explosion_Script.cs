@@ -26,8 +26,8 @@ public class Explosion_Script : MonoBehaviour
 
         float distanceToPlayer = Vector2.Distance(playerPos, thisPos);
 
-        if (distanceToPlayer < explosionRadius) {
-            //shake.gameObject.GetComponent<Screen_Shake>().TriggerShake();
+        if (distanceToPlayer < explosionRadius) 
+        {
             player.GetComponent<Health_Script>().RemoveHealth(explosionDamage);
             Debug.Log("Hit");
         }

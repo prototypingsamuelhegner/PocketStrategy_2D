@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class Health_Script : MonoBehaviour
 {
+    public GameObject screen;
+
     public int startHealth;
 
     bool deathCalled;
@@ -33,7 +35,8 @@ public class Health_Script : MonoBehaviour
         }
 
         SetHealthText();
-        Restart();
+        DeathScene();
+        //Restart();
     }
 
     IEnumerator Death()
@@ -63,11 +66,21 @@ public class Health_Script : MonoBehaviour
         yield return null;
     }
 
-    void Restart()
+   /*void Restart()
     {
         if(health <= 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }*/
+
+    void DeathScene()
+    {
+        if (health <= 0)
+        {
+            screen.SetActive(true);
+            //gameObject.GetComponent<Death_Screen>().DeathScreen();
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
@@ -83,6 +96,6 @@ public class Health_Script : MonoBehaviour
 
     void SetHealthText()
     {
-        healthCount.text = "Health: " + health.ToString();
+        healthCount.text = "Health: " + health;
     }
 }
