@@ -19,17 +19,18 @@ public class Explosion_Script : MonoBehaviour
     }
 
     public void Explode() {
+        if (player != null) {
+            Vector2 playerPos = new Vector2(player.transform.position.x, player.transform.position.y);
+            Vector2 thisPos = new Vector2(transform.position.x, transform.position.y);
 
-        Vector2 playerPos = new Vector2(player.transform.position.x, player.transform.position.y);
-        Vector2 thisPos = new Vector2(transform.position.x, transform.position.y);
+            float distanceToPlayer = Vector2.Distance(playerPos, thisPos);
 
-        float distanceToPlayer = Vector2.Distance(playerPos, thisPos);
-
-        if (distanceToPlayer < explosionRadius) 
-        {
-            player.GetComponent<Health_Script>().RemoveHealth(explosionDamage);
-            Camera.main.GetComponent<CameraControl>().Shake(.2f, 40, 10f);
-            Debug.Log("Hit");
+            if (distanceToPlayer < explosionRadius)
+            {
+                player.GetComponent<Health_Script>().RemoveHealth(explosionDamage);
+                Camera.main.GetComponent<CameraControl>().Shake(.2f, 40, 10f);
+                Debug.Log("Hit");
+            }
         }
     }
 }

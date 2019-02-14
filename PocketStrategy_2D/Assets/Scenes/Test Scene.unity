@@ -1363,8 +1363,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 586f60d9e6129ba4599aca2fa8513c02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screen: {fileID: 0}
+  screen: {fileID: 2033087655}
   startHealth: 5
+  health: 0
   destroyOnDeath: 1
   animationOnDeath: 0
   explodeOnDeath: 0
