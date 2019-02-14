@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Tile
   - Mortar
+  - Test
   layers:
   - Default
   - TransparentFX

@@ -50,6 +50,7 @@ public class Create_Field : MonoBehaviour
         for (int i = 0; i < numMortars; i++)
         {
             tiles = GameObject.FindGameObjectsWithTag("Tile");
+
             index = Random.Range(0, tiles.Length);
             mortarPos = tiles[index];
 
@@ -70,6 +71,7 @@ public class Create_Field : MonoBehaviour
         while (enabled)
         {
             mortars = GameObject.FindGameObjectsWithTag("Mortar");
+            //Debug.Log(mortars);
             MortarStrike();
 
             yield return new WaitForSeconds(timer);
