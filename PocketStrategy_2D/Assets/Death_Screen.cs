@@ -20,10 +20,12 @@ public class Death_Screen : MonoBehaviour
 
     public void DeathScreen()
     {
+        Time.timeScale = 0;
+
         if(Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
+            Time.timeScale = 1;
         }
 
         if(Input.GetKeyDown(KeyCode.Escape))

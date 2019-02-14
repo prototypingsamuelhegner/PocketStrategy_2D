@@ -66,22 +66,14 @@ public class Health_Script : MonoBehaviour
         yield return null;
     }
 
-   /*void Restart()
-    {
-        if(health <= 0)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-    }*/
-
     void DeathScene()
     {
         if (health <= 0)
         {
             if (gameObject.tag == "Player")
+            
                 screen.SetActive(true);
-            //gameObject.GetComponent<Death_Screen>().DeathScreen();
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            
         }
     }
 
