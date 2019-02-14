@@ -14,9 +14,9 @@ public class Set_Neighbours : MonoBehaviour
     {
         col = GetComponent<CircleCollider2D>();
         Set();
-        Destroy(col);
-        box = gameObject.AddComponent<BoxCollider2D>();
-        box.isTrigger = true;
+
+        Invoke("SetTrigger", Time.deltaTime);
+        
     }
 
     void Set() {
@@ -53,5 +53,10 @@ public class Set_Neighbours : MonoBehaviour
                 }
             }
         }
+    }
+    void SetTrigger() {
+        Destroy(col);
+        box = gameObject.AddComponent<BoxCollider2D>();
+        box.isTrigger = true;
     }
 }

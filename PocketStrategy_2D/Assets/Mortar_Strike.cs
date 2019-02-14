@@ -39,7 +39,7 @@ public class Mortar_Strike : MonoBehaviour
         {
             yield return new WaitForSeconds(boomTimer);
 
-            Debug.Log("Ready");
+            //Debug.Log("Ready");
 
             yield return new WaitForSeconds(timer);
             gameObject.GetComponent<Explosion_Script>().Explode();

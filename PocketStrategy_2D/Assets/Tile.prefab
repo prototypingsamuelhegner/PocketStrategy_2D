@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6954918157602087505}
   - component: {fileID: 9145734559960855778}
   - component: {fileID: 4828556427880064767}
+  - component: {fileID: 1485906048391673120}
   m_Layer: 8
   m_Name: Tile
   m_TagString: Tile
@@ -113,3 +114,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.95
+--- !u!114 &1485906048391673120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3194857507598516033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b446bfaf1b2c0ef4db7e01293f05f2ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

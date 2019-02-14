@@ -78,7 +78,8 @@ public class Health_Script : MonoBehaviour
     {
         if (health <= 0)
         {
-            screen.SetActive(true);
+            if (gameObject.tag == "Player")
+                screen.SetActive(true);
             //gameObject.GetComponent<Death_Screen>().DeathScreen();
             //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
@@ -96,6 +97,7 @@ public class Health_Script : MonoBehaviour
 
     void SetHealthText()
     {
+        if(gameObject.tag == "Player")
         healthCount.text = "Health: " + health;
     }
 }

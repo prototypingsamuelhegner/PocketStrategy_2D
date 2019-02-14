@@ -26,7 +26,7 @@ public class Bullet_Script : MonoBehaviour
 
             if (Vector2.Distance(transform.position, previousPos) < 0.1f)
             {
-                target.GetComponent<Health_Script>().RemoveHealth(1);
+                //target.GetComponent<Health_Script>().RemoveHealth(1);
                 gameObject.SetActive(false);
             }
             else
