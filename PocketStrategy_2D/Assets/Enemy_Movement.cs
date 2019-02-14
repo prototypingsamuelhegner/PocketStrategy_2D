@@ -37,8 +37,8 @@ public class Enemy_Movement : MonoBehaviour
 
     void ReachedEnd() {
         //whatever happens when the enemy hits the last path point
-
         GameObject.FindObjectOfType<Wave_Manager>().activeEnemies.Remove(this.gameObject);
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Health_Script>().RemoveHealth(1);
         current = 1;
     }
 }
