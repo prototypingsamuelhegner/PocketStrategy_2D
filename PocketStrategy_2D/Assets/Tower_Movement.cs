@@ -6,12 +6,14 @@ public class Tower_Movement : MonoBehaviour
 {
     Ray ray;
 
-
     Animator anim;
 
     public GameObject currentTile;
 
     public bool moving;
+
+    Vector3 rightScale;
+    Vector3 leftScale;
 
     [Range(0, 20)]
     public int speed = 1;
@@ -27,6 +29,8 @@ public class Tower_Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        rightScale = transform.localScale;
+        leftScale = new Vector3(-rightScale.x, rightScale.y, rightScale.z);
         Set_Neighbours[] tiles = FindObjectsOfType<Set_Neighbours>();
         anim = transform.GetChild(0).GetComponent<Animator>();
         GameObject temp_Closest = new GameObject();
@@ -113,6 +117,7 @@ public class Tower_Movement : MonoBehaviour
                         currentTile = currentTile.GetComponent<Set_Neighbours>().right;
                         moving = true;
                         gameObject.SendMessage("Rotate");
+                        transform.localScale = rightScale;
                     }
                 }
                 else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
@@ -122,6 +127,7 @@ public class Tower_Movement : MonoBehaviour
                         currentTile = currentTile.GetComponent<Set_Neighbours>().left;
                         moving = true;
                         gameObject.SendMessage("Rotate");
+                        transform.localScale = leftScale;
                     }
                 }
             }
@@ -142,6 +148,9 @@ public class Tower_Movement : MonoBehaviour
                 moving = false;
             }
         }
+
+        anim.SetBool("Moving", moving);
+
     }
 
 
