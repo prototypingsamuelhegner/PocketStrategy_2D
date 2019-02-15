@@ -8,7 +8,7 @@ public class Explosion_Script : MonoBehaviour
 
     //public Camera shake;
 
-    float explosionRadius = 1;
+    float explosionRadius = 1.3f;
     int explosionDamage = 1;
 
     // Start is called before the first frame update
